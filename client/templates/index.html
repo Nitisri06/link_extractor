@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Link_Extractor</title>
+</head>
+<body  style="background-repeat: no-repeat;background-size: cover;background-image: url(https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/129325364/original/afaddcb9d7dfaaf5bff7ef04101935814665ac16/design-an-attractive-background-for-your-website.png);"></body>
+<form action='/' method = 'POST'
+      enctype = "multipart/form-data" class="form">
+           <div class="txt">
+               <label  style="font-size:30pt;font-weight: bold; color:yellow" >URL : </label>
+
+           </div>
+           <div class="box">
+               <hr>
+               <p><input type="text"  id = "input_links" name="input_links" placeholder="                  .....search_url....." style="font-size:12pt;height:20px;width:300px"></p>
+               <hr>
+           </div>
+           <div class="button">
+                <input type="submit" value="submit"  style="height:20px;width:100px"/><br><br>
+           </div>
+
+</form>
+ {% if each_link %}
+      <div class="link_extraction"  >
+        {%for i in each_link %}
+         <div>
+           <p>
+           <a href="{{ i }}" style="color:yellow"> {{ i}} </a>
+         </div>
+      {%endfor%}
+    </div>
+  {% endif %}
+
+</body>
+</html>
+<style type="text/css">
+    .txt {
+        text-align: center;}
+    .box {
+        text-align: center;}
+    .button {
+        text-align: center;text-decoration-color: deeppink}
+    .link_extraction{
+        text-align: center;text-decoration-color: deeppink}
+</style>
